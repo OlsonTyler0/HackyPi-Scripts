@@ -1,6 +1,7 @@
 # This code uses base provided by the hacky pi and then additional code in 
-# order to display a dedsec gif, because why not.
+# order to display a dedsec gif.
 # Faced toward the USB in order to look the best
+# DisplayIO makes this really slow, need to work on directly writing to screen.
 
 
 import time, board, math, busio, terminalio, displayio, os, digitalio, gifio
@@ -30,6 +31,7 @@ display = ST7789(display_bus, rotation=180, width=135, height=240, rowstart=40, 
 main = displayio.Group()
 display.root_group = main
 
+# Change this to change the gif used
 odg = gifio.OnDiskGif('/dedsec.gif')
 
 start = time.monotonic()
