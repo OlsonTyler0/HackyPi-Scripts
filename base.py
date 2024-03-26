@@ -1,13 +1,9 @@
-# This code was provided by the company who created this.
+# This code was provided by the company who created the device
+# I've updated it in order to optimize the code
 # I just use it as a base with the libraries it contains
-import time
-import os
-import usb_hid
-import digitalio
-import board
-import busio
-import terminalio
-import displayio
+
+# Import base libraries
+import time, os, usb_hid, digitalio, board, busio, terminalio, displayio
 from adafruit_display_text import label
 from adafruit_hid.keyboard import Keyboard, Keycode
 from keyboard_layout_win_uk import KeyboardLayout
@@ -23,6 +19,7 @@ TEXT_COLOR = 0x0000ff
 # Release any resources currently in use for the displays
 displayio.release_displays()
 
+# Define the pins
 tft_clk = board.GP10 # must be a SPI CLK
 tft_mosi= board.GP11 # must be a SPI TX
 tft_rst = board.GP12
@@ -38,6 +35,7 @@ display = ST7789(display_bus, rotation=270, width=240, height=135, rowstart=40, 
 splash = displayio.Group()
 display.show(splash)
 
+# Make the bitmap for color
 color_bitmap = displayio.Bitmap(display.width, display.height, 1)
 color_palette = displayio.Palette(1)
 color_palette[0] = BACKGROUND_COLOR
@@ -48,6 +46,7 @@ led = digitalio.DigitalInOut(tft_bl)
 led.direction = digitalio.Direction.OUTPUT
 led.value=True
 
+# Make the sprite and put it on screen
 bg_sprite = displayio.TileGrid(color_bitmap, pixel_shader=color_palette, x=0, y=0)
 splash.append(bg_sprite)
 
