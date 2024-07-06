@@ -1,8 +1,16 @@
 # HackyPi Scripts
- A collection of scripts I've written for HackyPi just toying around with it. 
- I have files for actual use and just fun hackey ones. Just see for youself!
- All you have to do is update their names to code.py in order to run it on the hackypi
+ A collection of scripts I've written for HackyPi. 
+ All you need to do for these scripts to work is to replace the code.py file with this code
+---
 
-LIB = Contains the Library of files used by hackypi. This is just here for resources, I don't own the content
+These are not built to be installed on a regular system, and can only be run on the hackypi
+most of these were built with thonny in order to test code as I went.
 
-GIF = This folder contains gif code. Attempts to use to display gifs on the hackyPi
+---
+
+Table of contents  
+- Dedsecgif.py
+> This is a program for writing a gif with display IO to the display
+
+- structgif.py 
+> Currently broken program using struct to write directly to the display

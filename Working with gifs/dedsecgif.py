@@ -1,13 +1,7 @@
-<<<<<<<< HEAD:Gif/dedsecgif.py
-# This code uses base provided by the hacky pi and then additional code in 
-# order to display a dedsec gif.
-========
 # This code uses base provided by Hacky Pi
 # Code loads a gif onto the screen and plays it frame by frame
 # Due to reliance on displayio its slow Writing directly to the display has some issues.
->>>>>>>> 31f2c91d6a0ed61d0a5a748612db1a8c539eff52:Working with gifs/dedsecgif.py
 # Faced toward the USB in order to look the best
-# DisplayIO makes this really slow, need to work on directly writing to screen.
 
 # Import the required libraries
 import time, board, math, busio, terminalio, displayio, os, digitalio, gifio
@@ -39,11 +33,7 @@ display = ST7789(display_bus, rotation=180, width=135, height=240, rowstart=40, 
 main = displayio.Group()
 display.root_group = main
 
-<<<<<<<< HEAD:Gif/dedsecgif.py
-# Change this to change the gif used
-========
 # Load dedsec.gif 
->>>>>>>> 31f2c91d6a0ed61d0a5a748612db1a8c539eff52:Working with gifs/dedsecgif.py
 odg = gifio.OnDiskGif('/dedsec.gif')
 
 # Calculate time between frames
