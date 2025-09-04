@@ -1,6 +1,6 @@
 # This code was provided by the company who created the device
 # I've updated it in order to optimize the code
-# I just use it as a base with the libraries it contains
+# This is just used in this repository as base for other scripts.
 
 # Import base libraries
 import time, os, usb_hid, digitalio, board, busio, terminalio, displayio
